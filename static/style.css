@@ -1,0 +1,134 @@
+/* Styles pour la page d'accueil */
+
+/* Arrière-plan avec un dégradé subtil */
+body {
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* Dégradé élégant */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    position: relative;
+}
+
+/* Overlay sombre pour améliorer la lisibilité */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay noir avec transparence */
+    z-index: -1; /* Derrière tout le contenu */
+}
+
+/* Styles pour la barre de navigation */
+nav {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond transparent */
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav .navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+nav .navbar-nav a {
+    color: white;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav .navbar-nav a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Effet hover */
+    border-bottom: 2px solid #ff5722; /* Soulignement orange au hover */
+    border-radius: 5px;
+}
+
+/* Styles pour le titre */
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 100px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre portée */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards ease-in-out 0.5s; /* Apparition fluide */
+}
+
+/* Styles pour le texte principal */
+p.lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Légère ombre portée */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s forwards ease-in-out 0.7s;
+}
+
+/* Styles pour les boutons */
+.btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #e64a19; /* Changement de couleur au hover */
+    transform: scale(1.05); /* Effet de mise en avant au survol */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+/* Apparition fluide */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries pour rendre la page responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p.lead {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0;
+    }
+}
